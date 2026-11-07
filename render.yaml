@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ecourts-mp-search
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ECOURTS_API_KEY
+        sync: false
